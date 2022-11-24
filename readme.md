@@ -23,13 +23,12 @@ Functions
         All fields are mandatory which HEBID should be unique
 
 
+    
+    4. Update Book documents
+        inventory documents can be updated by Users that logged in
+    5. Display inventory documents
+        display all documents 
+    5. Delete inventory documents
+            The document can be deleted by Users that logged in
 
-3. Update inventory documents
-• An inventory document can only be updated by its manager (the one who created
-the document)
-4. Display inventory documents
-
-5. Delete inventory documents
-The document can be deleted
-
-7. Provide the following RESTful service
+    6. Provide the following RESTful service
