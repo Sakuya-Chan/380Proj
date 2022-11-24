@@ -96,8 +96,52 @@ The server can pass different test cases. Here is a sample stest case
     o The System block the unregistered user.
 
    7 Precondition:
-        loged in
+        logged in
     Steps:
     o click logout
     Expected outcome:
     o The System return to login page.
+
+ 8 Precondition:
+        logged in
+    Steps:
+    o click add new document
+        enter reapeted HEBID
+        click submit
+        go back
+        enter some of the fields
+        click submit
+        go back
+        enter all of the fields
+        click submit
+        go back
+    Expected outcome:
+    o The System will prevent saving uncompleted inputs and repeated HEBID
+    the system will add the new book document if all fields are entered and not repeated HEBID
+
+    9 Precondition:
+        logged in
+    Steps:
+    
+        click edit on any record in index page
+        enter reapeted HEBID other than own
+        click submit
+        go back
+        enter some of the fields
+        click submit
+        go back
+        enter all of the fields
+        click submit
+        go back
+    Expected outcome:
+    o The System will prevent saving uncompleted inputs and repeated HEBID
+    the system will update the book document if all fields are entered and not repeated HEBID
+
+ 10 Precondition:
+        logged in
+    Steps:
+   
+        click delete on any record in index page
+        
+    Expected outcome:
+    The system will show the index page without the deleted record
