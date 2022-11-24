@@ -108,9 +108,9 @@ app.post('/reg', async (req, res) => {
     try {
       var data = new userdata(item);
       await data.save();
-      res.render('reg', { warning: 'Successfully registered' })
+      res.render('login', { warning: 'Successfully registered' })
     } catch (expection) {
-      res.render('reg', { warning: 'Please check your input' })
+      res.render('login', { warning: 'Please check your input' })
     }
 
 

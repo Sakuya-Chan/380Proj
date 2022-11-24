@@ -52,38 +52,52 @@ Functions
         get del                 req.body`                   html
 
 The server can pass different test cases. Here is a sample stest case
-    Precondition:
+   1 Precondition:
     
     Steps:
     o register as any UserID and any password
     Expected outcome:
     o The System successfully register the new user.
-=======
-    Precondition:
+
+   2 Precondition:
     registered userID and password
     Steps:
     o register as any registered UserID and any password
     Expected outcome:
-    o The System block register the new repeated user.
-=======
-    Precondition:
+    o The System block registering the new repeated user.
+
+   3 Precondition:
     
     Steps:
     o login as any userID and any password not registered
     Expected outcome:
     o The System block the unregistered user.
 
-=======
-    Precondition:
+
+   4 Precondition:
         registered userID and password
     Steps:
     o login as any name and any password registered
     Expected outcome:
     o The System show the index page with userID.
-========
-    Precondition:
+
+   5 Precondition:
         
     Steps:
     o login as any name and any password not registered
     Expected outcome:
     o The System block the unregistered user.
+
+   6 Precondition:
+        
+    Steps:
+    o login as any name and any password not registered
+    Expected outcome:
+    o The System block the unregistered user.
+
+   7 Precondition:
+        loged in
+    Steps:
+    o click logout
+    Expected outcome:
+    o The System return to login page.
