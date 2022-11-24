@@ -38,4 +38,52 @@ Functions
 
     6. Provide the following RESTful service
         Request                 Parameters                  Response
+        Get login               msg                         html
+        Post login              req.body,{User doc}         html
+        get /                   req.session                 [{bookdoc1},  
+                                item                        doc2}..],html
+        get reg                 warning                     html
+        post reg                req.body                    html
+        get edit                req.params                  html,{book doc}
+        post edit               req.body,{book doc}         html
+        post logout             {}                          html
+        get /create             {}                          html
+        post /create            req.body,{book doc}         html
+        get del                 req.body`                   html
+
+The server can pass different test cases. Here is a sample stest case
+    Precondition:
+    
+    Steps:
+    o register as any UserID and any password
+    Expected outcome:
+    o The System successfully register the new user.
+=======
+    Precondition:
+    registered userID and password
+    Steps:
+    o register as any registered UserID and any password
+    Expected outcome:
+    o The System block register the new repeated user.
+=======
+    Precondition:
+    
+    Steps:
+    o login as any userID and any password not registered
+    Expected outcome:
+    o The System block the unregistered user.
+
+=======
+    Precondition:
+        registered userID and password
+    Steps:
+    o login as any name and any password registered
+    Expected outcome:
+    o The System show the index page with userID.
+========
+    Precondition:
         
+    Steps:
+    o login as any name and any password not registered
+    Expected outcome:
+    o The System block the unregistered user.
